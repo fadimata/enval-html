@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body style="background-color:  #E7F9FD;">
+
+
+
+    <aside id="separator-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        aria-label="Sidebar">
+        <div class="h-full px-3 py-4 overflow-y-auto bg-white">
+            <img class=" mr-2" src="./inval.png" alt="logo">
+            <ul class="space-y-2 font-medium">
+                <li>
+                    <a href="Dashboard.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                        <span class="material-symbols-outlined">
+                            grid_view
+                        </span>
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href=" facture.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg  dark:text-white  dark:hover:bg-gray-700"  style="background-color: #4A95A6;">
+
+                        <span class="material-symbols-outlined">
+                            directions_car
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Facture</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="commande.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                        <span class="material-symbols-outlined">
+                            directions_car
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Commande</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="suivi.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <span class="material-symbols-outlined">
+                            cases
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Suivi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Service.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <span class="material-symbols-outlined">
+                            chat
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Service Client</span>
+                    </a>
+                </li>
+
+            </ul>
+            <div id="toast-bottom-left" class="fixed flex  text-gray-500  bottom-5 left-5 " role="alert">
+                <ul class="pt-4 mt-4 space-y-2 font-medium ">
+
+                    <li>
+                        <a href="#"
+                            class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                            <span class="material-symbols-outlined">
+                                settings
+                            </span>
+                            <span class="ml-3">Paramètre Compte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="enval.html"
+                            class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                            <span class="material-symbols-outlined">
+                                keyboard_tab_rtl
+                            </span>
+                            <span class="ml-3">Déconnexion</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </aside>
+
+
+    </div>
+    <div class="p-1 sm:ml-64">
+        <div class="flex justify-end px-5 navbar h-12 w-90 bg-white">
+
+            <div 
+                class="flex justify-end px-5 items-center w-full max-w-xs p-4 space-x-4 text-gray-500  divide-x divide-gray-200  -right-40"
+                role="alert">
+                <span class="material-symbols-outlined text-end">
+                    notifications
+                </span>
+                <img src="./b2.png" alt="" style="width: 10%;">
+               
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <div class="p-4 sm:ml-64">
+        <div class="p-4 bg-white rounded-lg ">
+            <div class="flex items-center justify-between border-t">
+              
+                <h2 style="font-size: xx-large; margin-top: 10px; "> Facture:</h2>
+                
+                <form style="display: flex; justify-content: end;">
+                    <label for="default-search" class=" text-sm font-medium text-gray-900 sr-only dark:text-white "
+                        style="margin-top: 10px;">Search</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex  pl-3 pointer-events-none ">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400 mt-4" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <input type="search" id="default-search"
+                            class="block  p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required>
+
+
+                    </div>
+            </div>
+            </form>
+            <div class="relative overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400" style="height: 56rem;">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <t r style="text-align: center; ">
+
+
+
+                            </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+
+                            <td class="px-6 py-4 w-1/5"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                Factures
+
+                            </td>
+                            <td class="px-6 py-4 w-1/5"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                Laboratoire
+                            </td>
+                            <td class="px-6 py-4 w-1/5"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                Date
+                            </td>
+
+                            <td class="px-6 py-4 w-1/5" style="border-top: 1px solid rgba(183, 177, 177, 0.513);">
+                                Cliquez pour voir le rapport
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+
+                            <td class="px-6 py-4 w-1/5"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                000112
+                            </td>
+                            <td class="px-6 py-4 w-1/5"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                Enval
+                            </td>
+                            <td class="px-6 py-4 w-1/5"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                12/03/2023
+                            </td>
+
+                            <td class="px-6 py-4 text-center" style="border-top: 1px solid rgba(183, 177, 177, 0.513);">
+                                <button type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800  px-10 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2  dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                    style="background-color: #4A96A6; text-align: center;">Voir</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white dark:bg-gray-800">
+
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                000112
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+
+                            <td class="px-6 py-4 text-center" style="border-top: 1px solid rgba(183, 177, 177, 0.513);">
+                                <button type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 px-10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                    style="background-color: #4A96A6;">Voir</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white dark:bg-gray-800">
+
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                000112
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+
+                            <td class="px-6 py-4 text-center" style="border-top: 1px solid rgba(183, 177, 177, 0.513);">
+                                <button type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 px-10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                    style="background-color: #4A96A6;">Voir</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white dark:bg-gray-800">
+
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                000112
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+
+                            <td class="px-6 py-4 text-center" style="border-top: 1px solid rgba(183, 177, 177, 0.513);">
+                                <button type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 px-10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                    style="background-color: #4A96A6;">Voir</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white dark:bg-gray-800">
+
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                000112
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+
+                            <td class="px-6 py-4 text-center" style="border-top: 1px solid rgba(183, 177, 177, 0.513);">
+                                <button type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 px-10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                    style="background-color: #4A96A6;">Voir</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white dark:bg-gray-800">
+
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                000112
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+
+                            <td class="px-6 py-4 text-center" style="border-top: 1px solid rgba(183, 177, 177, 0.513);">
+                                <button type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800  px-10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                    style="background-color: #4A96A6;">Voir</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white dark:bg-gray-800">
+
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                000112
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+
+                            <td class="px-6 py-4 text-center" style="border-top: 1px solid rgba(183, 177, 177, 0.513);">
+                                <button type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 px-10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                    style="background-color: #4A96A6;">Voir</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white dark:bg-gray-800">
+
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                000112
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+
+                            <td class="px-6 py-4 text-center" style="border-top: 1px solid rgba(183, 177, 177, 0.513);">
+                                <button type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 px-10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                    style="background-color: #4A96A6;">Voir</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white dark:bg-gray-800">
+
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+                                000112
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+                            <td class="px-6 py-4"
+                                style="border-right: 1px solid rgba(183, 177, 177, 0.513); border-top: 1px solid rgba(183, 177, 177, 0.513); ">
+
+                            </td>
+
+                            <td class="px-6 py-4 text-center" style="border-top: 1px solid rgba(183, 177, 177, 0.513);">
+                                <button type="button"
+                                    class="text-white  bg-blue-700 hover:bg-blue-800 px-10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                    style="background-color: #4A96A6;">Voir</button>
+                            </td>
+                        </tr>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

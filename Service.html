@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body style="background-color:  #daf0f5;">
+    <button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar"
+        aria-controls="separator-sidebar" type="button"
+        class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+            </path>
+
+        </svg>
+    </button>
+    <aside id="separator-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        aria-label="Sidebar">
+        <div class="h-full px-3 py-4 overflow-y-auto bg-white">
+            <img class=" mr-2" src="./inval.png" alt="logo">
+            <ul class="space-y-2 font-medium">
+                <li>
+                    <a href="Dashboard.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                        <span class="material-symbols-outlined">
+                            grid_view
+                        </span>
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href=" facture.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                        <span class="material-symbols-outlined">
+                            directions_car
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Facture</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="Dashboard.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                        <span class="material-symbols-outlined">
+                            directions_car
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Commande</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="suivi.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <span class="material-symbols-outlined">
+                            cases
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Suivi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Service.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg  dark:text-white  dark:hover:bg-gray-700"  style="background-color: #4A95A6;">
+                        <span class="material-symbols-outlined">
+                            chat
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Service Client</span>
+                    </a>
+                </li>
+
+            </ul>
+            <div id="toast-bottom-left" class="fixed flex  text-gray-500  bottom-5 left-5 " role="alert">
+                <ul class="pt-4 mt-4 space-y-2 font-medium ">
+
+                    <li>
+                        <a href="#"
+                            class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                            <span class="material-symbols-outlined">
+                                settings
+                            </span>
+                            <span class="ml-3">Paramètre Compte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="enval.html"
+                            class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                            <span class="material-symbols-outlined">
+                                keyboard_tab_rtl
+                            </span>
+                            <span class="ml-3">Déconnexion</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </aside>
+    <div class="p-1 sm:ml-64">
+        <div class="flex justify-end px-5 navbar h-12 w-90 bg-white">
+
+            <div 
+                class="flex justify-end px-5 items-center w-full max-w-xs p-4 space-x-4 text-gray-500  divide-x divide-gray-200  -right-40"
+                role="alert">
+                <span class="material-symbols-outlined text-end">
+                    notifications
+                </span>
+                <img src="./b2.png" alt="" style="width: 10%;">
+               
+            </div>
+
+
+        </div>
+        <div class="bg-white p- sm:ml-54"
+            style=" padding: 25px;  margin: 10px; border-radius: 3%;">
+            <h3>Sujet</h3>
+            <form>
+                <input type="text"
+                    class="bg-gray-100 py-2 px-3 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"> <br>
+                <h3 >Messages</h3>
+                <textarea
+                    class="bg-gray-100 mt-10  px-3 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                    style="height: 920px; resize:none" name="" id="" cols="30" rows="10"> </textarea>
+                    <button type="button" class="  mt-10 w-full py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800" style="background-color:#4A96A6">
+                        Envoyer
+                      </button>
+        </div>
+        <a href="dashboard.html" style="text-decoration: none;">
+
+        </a>
+    </div>
+    </form>
+
+
+    </div>
+    </div>
+    <tbody>
+
+    </tbody>
+</body>
+
+</html>

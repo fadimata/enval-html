@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+        :root {
+            --dot-diameter: 350px;
+            --circle-border-width: 3px;
+            --default-color: rgb(218, 214, 214);
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .container {
+            margin: auto;
+            width: 40%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-content: stretch;
+            align-items: center;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+            align-content: stretch;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            gap: 24px;
+            width: 450px;
+        }
+
+        h1 {
+            font-size: 28px;
+            line-height: 40px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        svg {
+            filter: drop-shadow(0 0 10px rgb(0 0 0 / 0.4));
+            
+        }
+        #neg{
+            top:27rem;
+            
+        }
+
+        .circle-container {
+            width: var(--dot-diameter);
+            height: var(--dot-diameter);
+            transform: rotate(-215deg);
+            fill: none;
+            stroke: rgb(211, 202, 202);
+            stroke-dasharray: 175 100;
+            stroke-linecap: round;
+        }
+
+        .circle-container__background {
+            fill: none;
+            stroke: white;
+            stroke-width: var(--circle-border-width);
+            stroke-dasharray: 75 100;
+            stroke-linecap: round;
+        }
+
+        .circle-container__progress {
+            fill: none;
+            stroke-linecap: round;
+            stroke: #4A96A6;
+            stroke-dasharray: 15 100;
+            stroke-linecap: round;
+            stroke-width: var(--circle-border-width);
+            transition: stroke-dashoffset 1s ease-in-out;
+        }
+
+        .stop1 {
+            stop-color: #e66465;
+        }
+
+        .stop2 {
+            stop-color: #9198e5;
+        }
+        @media (min-width: 640px) { 
+
+
+
+
+            
+         }
+
+
+
+
+
+
+
+
+        #container1,
+        #container2 {
+            margin: auto;
+            width: 40%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-content: stretch;
+            align-items: center;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+            align-content: stretch;
+            text-align: center;
+            color: rgb(243, 241, 241);
+            text-transform: uppercase;
+            gap: 24px;
+            width: 450px;
+        }
+
+        h1 {
+            font-size: 28px;
+            line-height: 40px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        svg {
+            filter: drop-shadow(0 0 10px rgb(0 0 0 / 0.4));
+
+        }
+#neg1{
+    top: 26rem;
+}
+        #container1 .circle-container1 {
+            width: var(--dot-diameter);
+            height: var(--dot-diameter);
+            transform: rotate(-225deg);
+            fill: none;
+            stroke: rgb(243, 242, 242);
+            stroke-dasharray: 175 100;
+            stroke-linecap: round;
+        }
+
+        #container1 .circle-container__background1 {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.1);
+            stroke-width: var(--circle-border-width);
+            stroke-dasharray: 75 100;
+            stroke-linecap: round;
+        }
+
+        #container1 .circle-container__progress1 {
+            fill: none;
+            stroke-linecap: round;
+            stroke: rgb(240, 235, 235);
+            stroke-dasharray: 85 100;
+            stroke-linecap: round;
+            stroke-width: var(--circle-border-width);
+            transition: stroke-dashoffset 1s ease-in-out;
+        }
+
+        #container1 .stop1-1 {
+            stop-color: #e66465;
+        }
+
+        #container1 .stop2-2 {
+            stop-color: #9198e5;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+
+<style></style>
+
+<body style="background-color:  #E7F9FD;">
+    <button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar"
+        aria-controls="separator-sidebar" type="button"
+        class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+            </path>
+
+        </svg>
+    </button>
+    <aside id="separator-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        aria-label="Sidebar">
+        <div class="h-full px-3 py-4 overflow-y-auto bg-white">
+            <img class=" mr-2" src="./inval.png" alt="logo">
+            <ul class="space-y-2 font-medium">
+                <li>
+                    <a href="Dashboard.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700" style="background-color: #4A95A6;">
+
+                        <span class="material-symbols-outlined">
+                            grid_view
+                        </span>
+
+                        <span class="flex-1 ml-3 whitespace-nowrap ">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href=" facture.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <span class="material-symbols-outlined">
+                            account_circle
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Facture</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="commande.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                        <span class="material-symbols-outlined">
+                            directions_car
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Commande</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="suivi.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <span class="material-symbols-outlined">
+                            cases
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Suivi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Service.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <span class="material-symbols-outlined">
+                            chat
+                        </span>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Service Client</span>
+                    </a>
+                </li>
+
+            </ul>
+            <div id="toast-bottom-left" class="fixed flex  text-gray-500  bottom-5 left-5 " role="alert">
+                <ul class="pt-4 mt-4 space-y-2 font-medium ">
+
+                    <li>
+                        <a href="#"
+                            class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                            <span class="material-symbols-outlined">
+                                settings
+                            </span>
+                            <span class="ml-3">Paramètre Compte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="enval.html"
+                            class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                            <span class="material-symbols-outlined">
+                                keyboard_tab_rtl
+                            </span>
+                            <span class="ml-3">Déconnexion</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </aside>
+    <div class="p-1 sm:ml-64 ">
+
+        <div class="flex justify-end px-5 navbar h-12 w-90 bg-white">
+
+            <div 
+                class="flex justify-end px-5 items-center w-full max-w-xs p-4 space-x-4 text-gray-500  divide-x divide-gray-200  -right-40"
+                role="alert">
+                <span class="material-symbols-outlined text-end">
+                    notifications
+                </span>
+                <img src="./b2.png" alt="" style="width: 10%;">
+               
+            </div>
+
+
+        </div>
+        <div class="m-20" style="display: flex;">
+            <div style="margin-left: 10px;">
+                <h1 class="mx-12" style="font-size: 25px; ">Analyses Positif </h1>
+
+                <div class="text-center h-96 w-80 m-10 "
+                    style=" background-color:#4A96A6; border-radius: 5%; margin-right: 100px;">
+                    <span class="material-symbols-outlined mt-5" style="font-size: 3em; ">
+                        bolt
+                    </span>
+                    <h1 class="text-2xl mt-5 ">Positif</h1>
+                    <div id="container1">
+                        <svg class="circle-container1 " viewBox="2 -2 28 36" xmlns="http://www.w3.org/2000/svg">
+                            <linearGradient id="gradient1">
+                                <stop class="stop1" offset="0%" />
+                                <stop class="stop2" offset="100%" />
+                            </linearGradient>
+                            <circle class="circle-container__background1" r="16" cx="16" cy="16"
+                                shape-rendering="geometricPrecision"></circle>
+                            <circle class="circle-container__progress1" r="16" cx="16" cy="16"
+                                style="stroke-dashoffset: 20" shape-rendering="geometricPrecision">
+                                <h1 style="margin-top: 70px; position:absolute" id="neg1">91%</h1>
+                            </circle>
+
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 class="mx-12" style="font-size: 25px;">Analyses Negatif </h1>
+
+                <div class="text-center h-96 w-80 m-10 bg-white rounded-xl border"
+                    style=" border-color: rgb(123, 179, 179) ;">
+                    <span class="material-symbols-outlined "
+                        style="background-color: rgb(133, 186, 186); border-radius: 50px; font-size: 3em; margin-top: 10px;">
+                        water_drop
+                    </span>
+                    <h1 class="text-2xl mt-5">Negatif</h1>
+                    <div id="container2">
+                        <svg class="circle-container" viewBox="2 -2 28 36" xmlns="http://www.w3.org/2000/svg">
+                            <linearGradient id="gradient">
+                                <stop class="stop1-1" offset="0%" />
+                                <stop class="stop2-2" offset="100%" />
+                            </linearGradient>
+                            <circle class="circle-container__background" r="16" cx="16" cy="16"
+                                shape-rendering="geometricPrecision"></circle>
+                            <circle class="circle-container__progress" r="16" cx="16" cy="16"
+                                style="stroke-dashoffset: 20" shape-rendering="geometricPrecision">
+                                <h1 style="margin-top: 70px; position:absolute" id="neg">9%</h1>
+                            </circle>
+                        </svg>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="m-20" style="font-size: 25px;">Analyses par mois </h1>
+            <div class="w-2/3 h-96 mt-20">
+                <canvas id="myChart"></canvas>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['JANVIER', 'FEVRIER', 'MARS', 'AVRIL', 'MAI', 'JUIN', 'JUILLET', 'AOUT', 'SEPTEMBRE', 'OCTOBRE', 'NOVEMBRE', 'DECEMBRE'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [16, 9, 20, 6, 8, 4, 10, 15, 14, 15, 14, 15],
+                    borderWidth: 1,
+                    backgroundColor: "white",
+                    hoverBackgroundColor: "#4A96A6"
+                }]
+            },
+            options: {
+                plugins:{
+                    legend:{
+                        display: false,
+                    }
+                },
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        display: false,
+                    },
+                    x: {
+                        grid: {
+                            color: "white"
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
